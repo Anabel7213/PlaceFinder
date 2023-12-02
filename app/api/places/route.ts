@@ -2,7 +2,7 @@ import axios from "axios"
 import { NextResponse } from "next/server"
 import { NextApiRequest } from "next"
 
-export async function GET(req: NextApiRequest) {
+export async function GET(req: Request) {
     const url = "https://maps.googleapis.com/maps/api/place/textsearch/json"
     const chunks = req.url?.split("?")
     if(chunks && chunks.length > 1) {
